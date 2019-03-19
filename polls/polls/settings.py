@@ -24,10 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ia@ajr9f8s&duq@n3-vy^-k8249@jp&o(+%!5s-x*i-@5c841w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'votingsapp.herokuapp.com'
+    'votingsapp.herokuapp.com',
+    '*'
 ]
 
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'pollingApp.apps.PollingappConfig',
 
     'rest_framework',
+    'catalog'
 ]
 
 MIDDLEWARE = [
@@ -76,6 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'polls.wsgi.application'
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Database
