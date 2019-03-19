@@ -82,18 +82,18 @@ WSGI_APPLICATION = 'polls.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'polls1',
-        'HOST': 'localhost',
-        'PORT': 5432,
-        'USERNAME': 'postgres',
-        'PASSWORD': 'password',
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'polls1',
+    #     'HOST': 'localhost',
+    #     'PORT': 5432,
+    #     'USERNAME': 'postgres',
+    #     'PASSWORD': 'password',
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
