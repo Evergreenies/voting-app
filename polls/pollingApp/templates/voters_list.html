@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    Total Number Of Voters: {{ total }}
+</div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Voter ID</th>
+        <th scope="col">Voter Name</th>
+        <th scope="col">Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for eachVoter in data %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ eachVoter.voter_id }}</td>
+        <td>{{ eachVoter.voter_name }}</td>
+        <td>{{ eachVoter.vote_time }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
