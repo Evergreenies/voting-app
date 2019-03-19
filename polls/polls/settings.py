@@ -25,7 +25,9 @@ SECRET_KEY = 'ia@ajr9f8s&duq@n3-vy^-k8249@jp&o(+%!5s-x*i-@5c841w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'votingsapp.herokuapp.com'
+]
 
 
 # Application definition

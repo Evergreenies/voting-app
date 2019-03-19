@@ -26,7 +26,6 @@ def voter_list(request):
         return render(request, 'voters_list.html', {'data': data, 'total': total})
 
 
-@api_view(['GET'])
 def voter_list_api(request):
     data = VoterDetail.objects.all()
     serialized = VotersListSerializer(data, many=True)
