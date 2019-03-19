@@ -1,4 +1,3 @@
-# voting-app
 A Simple Voting System.
 
 First we have to set up virtual environment the follow steps given below.
