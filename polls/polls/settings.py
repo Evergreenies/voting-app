@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ia@ajr9f8s&duq@n3-vy^-k8249@jp&o(+%!5s-x*i-@5c841w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'votingsapp.herokuapp.com',
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'pollingApp.apps.PollingappConfig',
 
     'rest_framework',
-    'catalog'
 ]
 
 MIDDLEWARE = [
@@ -85,18 +84,18 @@ STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'polls1',
-    #     'HOST': 'localhost',
-    #     'PORT': 5432,
-    #     'USERNAME': 'postgres',
-    #     'PASSWORD': 'password',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'polls1',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'USERNAME': 'postgres',
+        'PASSWORD': 'password',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 
@@ -140,4 +139,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
